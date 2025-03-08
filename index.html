@@ -8,15 +8,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
-    <script src="scripts/api.js"></script>
   </head>
-  <body class="font-[Montserrat]">
-    <!-- navbar -->
-    <!-- content -->
-    <div class="w-full bg-slate-300 shadow-lg rounded-lg mx-auto my-3 px-4 py-2" id="movies-container">
+  <body class="font-[Montserrat] bg-slate-600  [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
 
-        <h1 id="title">ini title</h1>
-    </div>
+
+    <!-- content -->
+      <section id="main" class=" pt-32 pb-36">
+        <div class="text-center">
+        <h1 class="inline-block text-4xl md:text-6xl font-black uppercase gradient-text text-transparent animate-gradient">YADISA</h1>
+        <h1 class="text-center text-2xl md:text-3xl font-bold uppercase mb-16 text-white ">Movie List</h1>
+        </div>
+        <!-- searchbar -->
+         <div class="max-w-2xl mx-auto flex justify-center gap-2 px-6 py-1">
+           <input type="text" class="w-full px-4 py-2 rounded-lg text-sm border-gray-300 focus:outline-none focus:border-blue-500" placeholder="Search movies..." id="input-film"/>
+           
+           <a href="create.html">
+             <button
+             class="py-2 px-3 bg-purple-800 border-none text-white rounded-lg hover:bg-purple-600"
+             id="add-film">Add</button>
+           </a>
+          </div>
+        </div>
+        <!-- accordion -->
+         <div class="w-full" id="film-list">
+           <div class="max-w-2xl mx-auto px-6 py-1" id="film-wrapper">
+            <div class="bg-white rounded-xl border-2">
+              <div class="accordion-header flex justify-between items-center">
+                <span class="font-semibold text-lg" id="film-title">Ini title film</span>
+                <img src="assets/icons/arrow-down.svg" alt="">
+              </div>
+              <div class="accordion-body">
+                <div class="p-4 border-t">
+                  <h1 id="film-title">Judul : <span class="font-bold">judul</span></h1>
+                  <h2 id="film-director">Direktur : <span class="font-bold">judul</span></h2>
+                  <h2 id="film-duration">Durasi : <span class="font-bold">judul</span></h2>
+                  <h2 id="film-year">Tahun rilis : <span class="font-bold">judul</span></h2>
+                  <h2 id="film-genre">Genre : <span class="font-bold">judul</span></h2>
+                  <h2 id="film-rating">Rating : <span class="font-bold">judul</span></h2>
+                  <div class="flex items-center mt-4 gap-2">
+                    <img src="assets/icons/trash.svg" alt="">
+                    <a href="edit.html"><img src="assets/icons/edit.svg" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+         </div>
+
+      </section>    
     <!-- footer -->
+     <script src="scripts/accordion.js"></script>
+     <script src="scripts/showHome.js"></script>
   </body>
 </html>
